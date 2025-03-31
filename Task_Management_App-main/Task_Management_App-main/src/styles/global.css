@@ -1,0 +1,214 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --card-bg: #f9f9f9;
+}
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #333;
+}
+.container {
+  max-width: 600px;
+  height: 100vh;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.task-form {
+  position: sticky;
+  top: 0;
+  background: var(--card-bg);
+  padding: 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  border-radius: 8px;
+}
+.task-list-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+  padding-right: 10px;
+}
+.task-list-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-list-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+.task-item {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  transition: 0.3s;
+  border: 1px solid white;
+}
+.task-item.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+.task-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px;
+}
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.task-details {
+  display: flex;
+  flex-direction: column;
+}
+.task-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.task-meta {
+  font-size: 12px;
+  color: #555;
+}
+.priority {
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.priority.high {
+  background: red;
+  color: white;
+}
+.priority.medium {
+  background: orange;
+  color: white;
+}
+.priority.low {
+  background: green;
+  color: white;
+}
+.due-date {
+  margin-left: 10px;
+  font-size: 12px;
+  color: var(--text-color);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input[type="text"],
+input[type="date"],
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+button {
+  padding: 10px 12px;
+  font-size: 16px;
+  background: none;
+  color: black;
+  background-color: rgb(153, 189, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: all .5s ease;
+}
+button:hover {
+  opacity: 0.8;
+  background-color: cornflowerblue;
+}
+.edit-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.task-view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.task-view span {
+  font-weight: bold;
+}
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+.edit-btn {
+  background: #007bff;
+  color: white;
+}
+.delete-btn {
+  background: red;
+  color: white;
+}
+.save-btn {
+  background: green;
+  color: white;
+}
+.task-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);
+}
+.filter-sort {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.filter-sort select {
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.tog {
+  font-size: 30px;
+  border: none;
+  text-align: left;
+  background: none;
+}
+.tog:hover{
+  background: none;
+}
+.tithead{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
